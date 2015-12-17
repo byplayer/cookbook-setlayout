@@ -1,6 +1,6 @@
-name             'cookbook-setlayout'
-maintainer       'YOUR_COMPANY_NAME'
-maintainer_email 'YOUR_EMAIL'
+name             'setlayout'
+maintainer       'byplayer'
+maintainer_email 'byplayer100@gmail.com'
 license          'All rights reserved'
 description      'Installs/Configures cookbook-setlayout'
 long_description IO.read(File.join(File.dirname(__FILE__), 'README.md'))
