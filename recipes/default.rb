@@ -30,7 +30,7 @@ bash 'install_setlayout' do
   cwd Chef::Config['file_cache_path']
   code <<-EOH
       tar -zxf #{file_name}
-      cd #{file_name.gsub(/\.tar\.gz/, '')}
+      cd setlayout-#{file_name.gsub(/\.tar\.gz/, '')}
       ./configure #{node['tmux']['configure_options'].join(' ')}
       make
       make install
