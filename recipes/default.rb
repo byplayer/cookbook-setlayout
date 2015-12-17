@@ -31,7 +31,7 @@ bash 'install_setlayout' do
   code <<-EOH
       tar -zxf #{file_name}
       cd setlayout-#{file_name.gsub(/\.tar\.gz/, '')}
-      ./configure #{node['tmux']['configure_options'].join(' ')}
+      ./configure #{node['setlayout']['configure_options'].join(' ')}
       make
       make install
     EOH
