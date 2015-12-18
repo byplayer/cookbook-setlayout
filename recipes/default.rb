@@ -18,7 +18,7 @@ packages.each do |name|
 end
 
 source_url = node['setlayout']['source_url'] % { :version => node['setlayout']['version'] }
-file_name = 'setlayout-' + source_url.split('/').last
+file_name = 'setlayout-' + source_url.split('/').last.gsub('v', '')
 remote_file "#{Chef::Config['file_cache_path']}/#{file_name}" do
   source source_url
   checksum node['setlayout']['checksum']
