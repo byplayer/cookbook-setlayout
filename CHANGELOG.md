@@ -3,6 +3,12 @@ setlayout CHANGELOG
 
 This file is used to list changes made in each version of the setlayout cookbook.
 
+1.0.3
+-----
+- [byplayer] - fix store filename
+
+
+
 1.0.2
 -----
 - [byplayer] - fix install dir bug

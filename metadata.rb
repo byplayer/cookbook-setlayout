@@ -6,4 +6,4 @@ description 'Installs/Configures setlayout'
 supports 'ubuntu'
 long_description IO.read(File.join(File.dirname(__FILE__), 'README.md'))
 source_url 'https://github.com/byplayer/cookbook-setlayout'
-version '1.0.2'
+version '1.0.3'
