@@ -18,7 +18,7 @@ packages.each do |name|
 end
 
 source_url = node['setlayout']['source_url'] % { :version => node['setlayout']['version'] }
-file_name = source_url.split('/').last
+file_name = 'setlayout-' + source_url.split('/').last
 remote_file "#{Chef::Config['file_cache_path']}/#{file_name}" do
   source source_url
   checksum node['setlayout']['checksum']
@@ -30,7 +30,7 @@ bash 'install_setlayout' do
   cwd Chef::Config['file_cache_path']
   code <<-EOH
       tar -zxf #{file_name}
-      cd setlayout-#{file_name.gsub(/\.tar\.gz/, '')}
+      cd #{file_name.gsub(/\.tar\.gz/, '')}
       ./configure #{node['setlayout']['configure_options'].join(' ')}
       make
       make install
